@@ -17,12 +17,12 @@ function drowCanvas() {
 }
 
 let hexColors = ['#b23232', '#ff4848', '#ff6c6c', '#e59b40', '#ffad48',
-    			  '#ffc57e', '#e5de40', '#fff748', '#fffa91', '#39cc4b',
-    			  '#48ff5e', '#91ff9e', '#3248b2', '#4867ff', '#91a3ff', 
-    			  '#6432b2', '#8f48ff', '#bb91ff', '#7c2b99', '#cf48ff',
-    			  '#e291ff', '#000000', '#323232', '#666666', '#999999',
-    			  '#cccccc', '#ffffff', '#3a2119', '#512e23', '#754233', 
-    			  '#90675b', '#ac8d84'];
+    			 '#ffc57e', '#e5de40', '#fff748', '#fffa91', '#39cc4b',
+    			 '#48ff5e', '#91ff9e', '#3248b2', '#4867ff', '#91a3ff', 
+    			 '#6432b2', '#8f48ff', '#bb91ff', '#7c2b99', '#cf48ff',
+    			 '#e291ff', '#000000', '#323232', '#666666', '#999999',
+    			 '#cccccc', '#ffffff', '#3a2119', '#512e23', '#754233', 
+    			 '#90675b', '#ac8d84'];
 
 let brush = 'black';
 function drowPallete() {
@@ -74,9 +74,22 @@ document.querySelector('.pallete').addEventListener('change', function(event) {
 })
 
 document.querySelector('.pallete').addEventListener('click', function(event) {
+	function colorToHex(color) {
+	    if (color.substr(0, 1) === '#')
+	        return color
+	    let digits = /(.*?)rgb\((\d+), (\d+), (\d+)\)/.exec(color)
+	    
+	    let red = parseInt(digits[2])
+	    let green = parseInt(digits[3])
+	    let blue = parseInt(digits[4])
+	    
+	    let rgb = blue | (green << 8) | (red << 16)
+	    return digits[1] + '#' + rgb.toString(16)
+	};
+
 	if (event.target.tagName === 'DIV' && event.target.className === 'pallete-color') {
 		brush = event.target.style.backgroundColor;
-		document.querySelector('.cur-color').style.backgroundColor = brush;
+		document.querySelector('.cur-color').value = colorToHex(brush);
 	}
 })
 
