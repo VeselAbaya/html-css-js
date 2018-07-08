@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	color: white;
+}
+
+.header {
+	height: 175px;
+	width: 100%;
+	background-color: violet;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	text-align: center;
+	margin: 0;
+	font-size: 4em;
+	background: inherit;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+}
+
+.pyramid {
+	margin-top: 3%;
+	margin-bottom: 5%;
+	border: solid violet 2px;
+	background-color: grey;
+	width: 75%;
+}
+
+.settings {
+	font-size: 1.3em;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.div_symbol {
+	height: 25%;
+	display: flex;
+	justify-content: center;
+	align-content: center; 
+}
+
+.div_size {
+	height: 25%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+label {
+	display: inline-block;
+	height: 22px;
+}
+
+.input_symbol {
+	height: 22px;
+	margin-left: 5px;
+	margin-right: 20px;	
+}
+
+.input_size {
+	height: 22px;
+	margin-left: 5px;
+}
+
+#p_size {
+	height: 22px;
+	width: 5px;
+	margin: 2px;
+	padding: 0; 
+}
+
+.painting {
+	background-color: white;	
+}
