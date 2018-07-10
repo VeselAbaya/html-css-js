@@ -81,19 +81,17 @@ $('.pallete').click(function(event) {
 	}
 })
 
-let mousemoveHandler = function(event) {
-	if (event.target.tagName === 'DIV' && event.target.className === 'pixel')
-		event.target.style.backgroundColor = brush
-}
-
 $('.canvas').mousedown(function(event) {
 	if (event.target.tagName === 'DIV' && event.target.className === 'pixel')
 		event.target.style.backgroundColor = brush
-	$('.canvas').on('mousemove', mousemoveHandler)
+	$('.canvas').on('mousemove', function(event) {
+		if (event.target.tagName === 'DIV' && event.target.className === 'pixel')
+			event.target.style.backgroundColor = brush
+	})
 })
 
 $('.canvas').mouseup(function(event) {
-	$('.canvas').off('mousemove', mousemoveHandler)
+	$('.canvas').off('mousemove')
 })
 
 drowCanvas();

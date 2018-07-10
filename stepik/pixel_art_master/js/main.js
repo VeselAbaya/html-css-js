@@ -94,13 +94,18 @@ document.querySelector('.pallete').addEventListener('click', function(event) {
 })
 
 let mousemoveHandler = function(event) {
-	if (event.target.tagName === 'DIV' && event.target.className === 'pixel')
+	if (event.target.tagName === 'DIV' && event.target.className === 'pixel') {
 		event.target.style.backgroundColor = brush
+		event.target.style.borderColor = brush
+	}
 }
 
 document.querySelector('.canvas').addEventListener('mousedown', function(event) {
-	if (event.target.tagName === 'DIV' && event.target.className === 'pixel')
+	if (event.target.tagName === 'DIV' && event.target.className === 'pixel') {
 		event.target.style.backgroundColor = brush
+		event.target.style.borderColor = brush
+	}
+
 	document.querySelector('.canvas').addEventListener('mousemove', mousemoveHandler)
 })
 
