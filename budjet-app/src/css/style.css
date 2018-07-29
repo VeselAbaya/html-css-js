@@ -1,0 +1,161 @@
+body {
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+#head {
+  background-image: url('../img/back.png');
+  background-size: cover;
+  background-position: bottom;
+}
+
+#income-cont {
+  background-color: #28B9B5;
+}
+
+#expenses-cont {
+  background-color: #FF5049;
+}
+
+#income-cont span, #expenses-cont span {
+  font-size: 12px;
+}
+
+#income {
+  margin-right: 4.2rem;
+}
+
+#income, #expenses {
+  font-size: 16px !important;
+}
+
+@media (max-width: 349px) {
+  #income-cont span, #expenses-cont span {
+    font-size: 8px;
+  }
+
+  #income, #expenses {
+    font-size: 12px !important;
+  }
+
+  #expenses-percentage {
+    font-size: 9px !important;
+  }
+
+  #submit-button {
+    color: white;
+    background-color: transparent;
+    font-size: 35px;
+    margin-left: 0.5rem;
+    height: 2rem;
+    width: 100%;
+  }
+}
+
+#expenses-percentage {
+  font-size: 10px !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-size: cover;
+  border-radius: 5px;
+}
+
+#budget {
+  font-weight: 100;
+  font-size: 60px;
+}
+
+#plus-minus {
+  width: 2rem;
+}
+
+#plus-minus:focus {
+  border-color: green !important;
+}
+
+#expense-form {
+  background-color: #28B9B5;
+}
+
+#expense-value {
+  width: 17%;
+  padding-left: 2px;
+}
+
+#submit-button {
+  color: white;
+  background-color: transparent;
+  font-size: 35px;
+  margin-left: 0.5rem;
+  transition: transform 0.05s;
+}
+
+.button-pressed {
+  transform: translateY(3px);
+}
+
+.form-control:focus {
+  border-color: white;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+select#plus-minus.form-control:focus {
+  border: 0;
+}
+
+ul li.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.incomes__delete-button {
+  color: #28B9B5;
+  background-color: transparent;
+  font-size: 20px;
+  margin-left: 0.5rem;
+  height: 1.9rem;
+}
+
+.incomes__income {
+  color: #28B9B5;
+}
+
+#incomes {
+  overflow: hidden;
+}
+
+.incomes__income--display {
+  height: 100%;
+  margin-right: -30px;
+  transition: margin-right 0.3s;
+}
+
+.incomes__income--display:hover {
+  margin-right: -5px;
+}
+
+.expenses__delete-button {
+  color: #FF5049;
+  background-color: transparent;
+  font-size: 20px;
+  margin-left: 0.5rem;
+  height: 1.9rem;
+}
+
+.expenses__expense {
+  color: #FF5049;
+}
+
+#expenses {
+  overflow: hidden;
+}
+
+.expenses__expense--display {
+  height: 100%;
+  margin-right: -30px;
+  transition: margin-right 0.3s;
+}
+
+.expenses__expense--display:hover {
+  margin-right: -5px;
+}
